@@ -149,7 +149,9 @@ def measure_min_heap(cities):
     insert_time = perf_counter() - start
 
     start = perf_counter()
+
     heap.peek()
+
     peek_time = perf_counter() - start
 
     start = perf_counter()
@@ -209,9 +211,13 @@ def run_benchmark():
 
 
 def save_results(results):
-    os.makedirs("results", exist_ok=True)
+    output_directory = "task1_data_structures/results"
+    os.makedirs(output_directory, exist_ok=True)
 
-    output_file = "results/task1_benchmark_results.csv"
+    output_file = os.path.join(
+        output_directory,
+        "task1_benchmark_results.csv",
+    )
 
     fieldnames = [
         "dataset_size",

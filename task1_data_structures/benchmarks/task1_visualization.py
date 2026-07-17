@@ -21,7 +21,7 @@ def load_results():
 
 
 def plot_operation_times(results):
-    structures = ["BST", "AVL", "Hash Table", "Min-Heap"]
+    structures = ["BST", "AVL", "Hash Table"]
 
     for operation in [
         "insert_seconds",
@@ -67,8 +67,6 @@ def plot_operation_times(results):
 
 
 def plot_heap_operations(results):
-    plt.figure()
-
     sizes = []
     peek_times = []
     extract_times = []
@@ -78,6 +76,8 @@ def plot_heap_operations(results):
             sizes.append(int(row["dataset_size"]))
             peek_times.append(float(row["peek_seconds"]))
             extract_times.append(float(row["extract_min_seconds"]))
+
+    plt.figure()
 
     plt.plot(
         sizes,
