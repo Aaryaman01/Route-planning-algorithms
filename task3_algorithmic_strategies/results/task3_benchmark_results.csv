@@ -1,0 +1,11 @@
+algorithm,input_size,average_time_seconds
+Weighted Job Scheduling,100,8.135999992191501e-05
+Weighted Job Scheduling,500,0.0004099199999927805
+Weighted Job Scheduling,1000,0.0009983800000100019
+Minimum Platforms,100,9.703999999146617e-05
+Minimum Platforms,500,0.0002878000000691827
+Minimum Platforms,1000,0.0006700600000385748
+Hamiltonian Cycle,6,8.859999979904387e-06
+Hamiltonian Cycle,8,2.7800000043498586e-05
+Hamiltonian Cycle,10,2.3740000051475364e-05
+Hamiltonian Cycle,12,2.5579999964975285e-05
