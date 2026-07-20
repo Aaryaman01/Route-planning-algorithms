@@ -1,0 +1,7 @@
+algorithm,item_count,average_time_seconds,number_of_bins
+First-Fit Decreasing,100,0.0005678999994415789,16
+Local Search,100,0.0002258399996208027,16
+First-Fit Decreasing,500,0.013997560000279918,82
+Local Search,500,0.007357400000182679,82
+First-Fit Decreasing,1000,0.053464299999905054,166
+Local Search,1000,0.02258631999975478,166
