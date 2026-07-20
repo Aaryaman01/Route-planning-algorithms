@@ -1,5 +1,6 @@
 from task4_np_hard_heuristics.bin_packing import (
-    first_fit_decreasing
+    first_fit_decreasing,
+    local_search
 )
 
 
@@ -18,7 +19,11 @@ bins = first_fit_decreasing(
     capacity
 )
 
-print("Number of bins:", len(bins))
+print("Bins after FFD:", len(bins))
+
+bins = local_search(bins)
+
+print("Bins after local search:", len(bins))
 
 for index, bin_container in enumerate(bins, start=1):
     print(

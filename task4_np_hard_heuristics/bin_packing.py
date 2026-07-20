@@ -45,3 +45,35 @@ def first_fit_decreasing(items, capacity):
             bins.append(new_bin)
 
     return bins
+
+
+def local_search(bins):
+    improved = True
+
+    while improved:
+        improved = False
+
+        for source_index in range(len(bins) - 1, -1, -1):
+            source_bin = bins[source_index]
+
+            for target_index in range(len(bins)):
+                if source_index == target_index:
+                    continue
+
+                target_bin = bins[target_index]
+
+                if all(
+                    target_bin.can_fit(item)
+                    for item in source_bin.items
+                ):
+                    for item in source_bin.items:
+                        target_bin.add_item(item)
+
+                    bins.pop(source_index)
+                    improved = True
+                    break
+
+            if improved:
+                break
+
+    return bins
